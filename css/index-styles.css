@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+   /* Primary Colours */
+   --primary-100: hsl(193 38% 86%);
+   --primary-200: hsl(150 100% 66%);
+
+   /* Neutral Colours */
+   --neutral-100: hsl(217 19% 38%);
+   --neutral-200: hsl(217 19% 24%);
+   --neutral-300: hsl(218 23% 16%);
+   
+   /* Typography */
+   font-family: 'Manrope', sans-serif;
+   font-size: 15px;
+}
+
+* {
+   box-sizing: inherit;
+   font: inherit;
+}
+
+body,
+html {
+   box-sizing: border-box;
+   margin: 0;
+
+   background: var(--neutral-300);
+}
+
+main {
+   position: fixed;
+   inset: 0;
+   margin: auto;
+ 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   background: var(--neutral-200);
+
+   width: calc(100% - 2rem);
+   height: fit-content;
+   border-radius: 10px;
+}
+
+.advice-wrapper {
+   display: inherit;
+   flex-direction: column;
+   padding: 0 2rem;
+   text-align: center;
+}
+
+.advice {
+   font-size: calc(1rem + 12px);
+   color: var(--primary-100);
+}
+
+.advice-id {
+   color: var(--primary-200);
+   text-transform: uppercase;
+   font-size: .8rem;
+   letter-spacing: 5px;
+   margin-top: 2rem;
+}
+
+.advice-decoration {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+picture {
+   width: 100%;
+   height: 3rem;
+   margin-bottom: 3rem;
+}
+
+button {
+   position: absolute;
+   bottom: -1.7rem;
+   left: 50%;
+   width: 3.5rem;
+   height: 3.5rem;
+
+   border: 0;
+   border-radius: 50%;
+
+   background: url("../images/icon-dice.svg") no-repeat, var(--primary-200);
+   background-size: 40%;
+   background-position: center center;
+   cursor: pointer;
+   transform: translateX(-50%);
+
+   transition: all .2s;
+}
+
+button:hover {
+   box-shadow: 0 0 20px var(--primary-200);
+}
+
+@media screen and (width >= 720px) {
+   main {
+      width: min-content;
+   }
+
+   picture {
+      width: min-content;
+      padding-inline: 3rem;
+   }
+}
+
+.attribution {position: fixed; bottom: 0; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
